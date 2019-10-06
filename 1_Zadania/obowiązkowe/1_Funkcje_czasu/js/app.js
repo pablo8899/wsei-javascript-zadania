@@ -12,5 +12,3 @@ function countHello(number)
     }, 500);
 
 }
-
-countHello(5);
