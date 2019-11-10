@@ -21,3 +21,4 @@ Robot.prototype.fixIt = function () {
     this.isFunctional = true;
     console.log("Robot " + this.name + "was fixed");
 };
+

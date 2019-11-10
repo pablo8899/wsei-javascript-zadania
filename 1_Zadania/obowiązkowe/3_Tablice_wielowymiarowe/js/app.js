@@ -63,7 +63,7 @@ print2DArray(arr);
 
 function create2DArray(rows,columns)
 {
-    let array2D = [,];
+    let array2D = [];
     
     var c = 0;
 
