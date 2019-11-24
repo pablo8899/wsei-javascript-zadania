@@ -12,3 +12,7 @@ callOtherFunction(function (a, b) {
     console.log("Wynik", a + b)
 })
 
+callOtherFunction("Add");
+callOtherFunction("multiply");
+callOtherFunction("subtract");
+callOtherFunction("divide");
