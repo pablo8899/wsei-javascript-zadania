@@ -5,16 +5,54 @@ document.addEventListener("DOMContentLoaded", function () {
     var blocks = document.querySelectorAll(".block");
     var links = document.querySelector(".links").children;
 
-    function getDatasInfo(elements)
+    function getDatasInfo(link)
     {
         var retArray = [];
-        console.log();
-        for (var key in Array.from(elements))
+        for (var key in Array.from(link))
         {
-            retArray.push(key.getAttribute("data-color"));
+            retArray.push(link[key].getAttribute("data-color"));
+        }
+
+        return retArray;
+    }
+
+    function LogClassNameAndTag(object)
+    {
+        console.log(object.className + "    " + object.tagName);
+    }
+
+    function iterateArray(object)
+    {
+        for (var key in Array.from(object))
+        {
+            LogClassNameAndTag(object[key]);
         }
     }
-    getDatasInfo(links);
+
+    //getDatasInfo(links);
+    //LogClassNameAndTag(homeElement);
+    //iterateArray(childElements);
+
+    var idMainFooter = document.getElementById("mainFooter");
+
+    function getId(object)
+    {
+        return object.getAttribute("id");
+    }
+
+    console.log(getId(idMainFooter));
+
+    function getClassInfo(element)
+    {
+        var retArray = []; 
+        
+        retArray.push(link[key]);
+
+        return retArray;
+    }
+
+    console.log(getClassInfo(banner));
+
     /*
     Poniżej napisz kod rozwiązujący zadania
      */
