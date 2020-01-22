@@ -26,3 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 })
+
+// w funkcji innerFuncOne() wpiszę event.target.style.backgroundColor = "red";
+//by pobrać sender funkcji

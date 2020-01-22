@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var blocks = document.querySelectorAll(".block");
     var links = document.querySelector(".links").children;
 
+    //Zadanie 0
     function getDatasInfo(link)
     {
         var retArray = [];
@@ -15,7 +16,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         return retArray;
     }
+    console.log(getDatasInfo(links));
 
+    //Zadanie 1
     function LogClassNameAndTag(object)
     {
         console.log(object.className + "    " + object.tagName);
@@ -29,10 +32,22 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    //getDatasInfo(links);
-    //LogClassNameAndTag(homeElement);
-    //iterateArray(childElements);
+    LogClassNameAndTag(homeElement);
+    LogClassNameAndTag(banner);
+    LogClassNameAndTag(links);
+    iterateArray(blocks);
+    iterateArray(childElements);
 
+    //Zadanie 2
+    //InnerHTML Zawiera znaczniki bez diva a outerhtml z divami
+    blocks.forEach(element => {
+       console.log(element.innerHTML);
+       console.log(element.outerHTML);
+       element.innerHTML = "Nowa wartość diva o klasie blocks";
+    });
+
+
+    //Zadanie 3
     var idMainFooter = document.getElementById("mainFooter");
 
     function getId(object)
@@ -41,20 +56,44 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     console.log(getId(idMainFooter));
+    
 
-    function getClassInfo(element)
+    //Zadanie 4
+
+    function getTags(elements)
     {
-        var retArray = []; 
-        
-        retArray.push(link[key]);
+        var retArray = [];
+
+        Array.from(elements).forEach(element => {
+            retArray.push(element.tagName);
+        });
 
         return retArray;
     }
+    console.log(getTags(childElements));
+
+
+    //Zadanie 5
+    function getClassInfo(element)
+    {
+        return element.classList;
+    }
 
     console.log(getClassInfo(banner));
+    
 
-    /*
-    Poniżej napisz kod rozwiązujący zadania
-     */
+    //Zadanie 6
+    var navList = document.querySelectorAll("nav li");
 
+    function setDataDirection(elements)
+    {
+        elements.forEach(element => {
+            if(element.getAttribute("data-direction") == null)
+            {
+                element.setAttribute("data-direction","top");
+            }
+        });
+    }
+
+    setDataDirection(navList);
 });
