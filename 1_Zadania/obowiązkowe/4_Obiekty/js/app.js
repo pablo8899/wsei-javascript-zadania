@@ -1,26 +1,24 @@
 var city = {
-    capital  : String,
-    population : Number,
-    president : String,
-    primeMinisters : String = []
+    capital  : "Kraków",
+    population : 770500,
+    president : "Anna Nowak",
+    primeMinisters : ["Jan Kowalski","Adam Dąbrowski"]
   };
   console.log(city)
 
   var timeMachine = {
-    shape : String,
-    model : String,
+    shape : "brak",
+    model : "v10.2",
     run : function run(date,place) {
         console.log(date +' ' + place);
       }
   }
-
-
   console.log(timeMachine)
   timeMachine.run(new Date("2019-01-26"),"asd")
 
   var person = {
-      name : String,
-      age : Number,
+      name : "Paweł",
+      age : 20,
       sayHello : function (){
             console.log("hello")  
       }
@@ -30,14 +28,11 @@ var city = {
   person.sayHello()
 
   var recipe = {
-      title : String,
-      servings : Number,
-      ingredients : String = []
+      title : "Mięso",
+      servings : 1,
+      ingredients : ['Mięso','Sól','Olej']
   }
 
-  recipe.title = 'Mięso'
-  recipe.servings = 1
-  recipe.ingredients = ['Mięso','Sól','Olej']
   console.log(recipe)
 
 

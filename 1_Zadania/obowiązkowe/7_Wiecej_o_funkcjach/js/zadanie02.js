@@ -6,13 +6,27 @@ function callOtherFunction(nameOfFunction) {
     nameOfFunction(randomNumber1, randomNumber2);
 }
 
+
 callOtherFunction(function (a, b) {
     console.log("Pierwsza liczba:", a);
     console.log("Druga liczba", b)
     console.log("Wynik", a + b)
 })
 
-callOtherFunction("Add");
-callOtherFunction("multiply");
-callOtherFunction("subtract");
-callOtherFunction("divide");
+callOtherFunction(function (a, b) {
+    console.log("Pierwsza liczba:", a);
+    console.log("Druga liczba", b)
+    console.log("Wynik", a - b)
+})
+
+callOtherFunction(function (a, b) {
+    console.log("Pierwsza liczba:", a);
+    console.log("Druga liczba", b)
+    console.log("Wynik", a * b)
+})
+
+callOtherFunction(function (a, b) {
+    console.log("Pierwsza liczba:", a);
+    console.log("Druga liczba", b)
+    console.log("Wynik", a / b)
+})

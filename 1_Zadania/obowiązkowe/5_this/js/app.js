@@ -37,3 +37,18 @@ stairs.up();
 stairs.up();
 stairs.down(); 
 stairs.printStep();
+
+//Zadanie 1
+
+car.technicalReview = ['07.08.2012','07.08.2013','07.08.2014','07.08.2015']
+car.AddTechnicalReview = (review) => {
+    car.technicalReview.push(review)
+}
+
+car.ReturnAllTechnicalReview = () => {
+  return car.technicalReview;
+}
+
+car.ReturnAllTechnicalReview();
+car.AddTechnicalReview('07.08.2016')
+console.log(car.ReturnAllTechnicalReview());
